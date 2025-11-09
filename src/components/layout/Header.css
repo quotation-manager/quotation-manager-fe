@@ -1,0 +1,142 @@
+.dashboard-header {
+  background: #fff;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 250px;
+  z-index: 999;
+  transition: left 0.2s ease;
+}
+
+.dashboard-header.collapsed {
+  left: 80px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.page-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.page-title .anticon {
+  font-size: 20px;
+  color: #667eea;
+}
+
+.page-title .ant-typography {
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.page-subtitle {
+  font-size: 14px;
+  color: #666;
+}
+
+.sidebar-toggle {
+  font-size: 18px;
+  color: #666;
+  padding: 0 12px;
+  height: 40px;
+  border-radius: 6px;
+}
+
+.sidebar-toggle:hover {
+  background-color: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 12px;
+}
+
+.user-info .ant-typography {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.user-role {
+  font-size: 12px;
+}
+
+.user-avatar {
+  background-color: #667eea;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.user-avatar:hover {
+  background-color: #5a6fd8;
+  transform: scale(1.05);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dashboard-header {
+    left: 0;
+    padding: 0 16px;
+    height: 64px;
+    min-height: 64px;
+  }
+
+  .dashboard-header.collapsed {
+    left: 0;
+  }
+
+  .header-right {
+    align-items: center;
+    height: 100%;
+  }
+
+  .header-right .ant-space {
+    align-items: center;
+  }
+
+  .user-avatar {
+    width: 36px !important;
+    height: 36px !important;
+    line-height: 36px !important;
+  }
+
+  .user-info {
+    display: none;
+  }
+
+  .page-title .ant-typography {
+    font-size: 16px;
+  }
+
+  .page-subtitle {
+    display: none;
+  }
+
+  .page-info {
+    gap: 2px;
+  }
+}

@@ -1,0 +1,220 @@
+.quotations-header {
+  margin-bottom: 16px;
+  overflow-x: hidden;
+}
+
+/* Ensure the filter container doesn't overflow */
+.quotations-header .ant-row {
+  margin: 0 !important;
+}
+
+.quotations-header .ant-col {
+  padding: 0 8px;
+}
+
+/* Ensure filters have minimum width */
+.quotations-header .ant-picker,
+.quotations-header .ant-select {
+  min-width: 200px;
+}
+
+.quotations-header .ant-picker-range {
+  min-width: 250px;
+}
+
+/* Table responsiveness */
+.ant-table-wrapper {
+  overflow-x: auto;
+}
+
+.ant-table {
+  min-width: 800px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  /* At this breakpoint, give filters more space by stacking them */
+  .quotations-header .ant-row > .ant-col:last-child .ant-row {
+    flex-direction: column;
+  }
+
+  .quotations-header .ant-row > .ant-col:last-child .ant-row > .ant-col {
+    margin-bottom: 12px;
+  }
+
+  /* Ensure filters maintain good width when stacked */
+  .quotations-header .ant-picker,
+  .quotations-header .ant-select {
+    min-width: 300px;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .quotations-header .ant-picker-range {
+    min-width: 350px;
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .quotations-header .ant-row {
+    flex-direction: column;
+  }
+
+  .quotations-header .ant-col {
+    margin-bottom: 16px;
+  }
+
+  /* Ensure good filter sizes on mobile */
+  .quotations-header .ant-picker,
+  .quotations-header .ant-select {
+    min-width: 280px;
+    width: 100%;
+  }
+
+  .quotations-header .ant-picker-range {
+    min-width: 300px;
+    width: 100% !important;
+  }
+
+  /* Stack date range picker inputs vertically on very small screens */
+  .ant-picker-range .ant-picker-input {
+    width: 100%;
+  }
+
+  .ant-table {
+    min-width: 700px;
+  }
+}
+
+@media (max-width: 576px) {
+  .quotations-header {
+    margin-bottom: 12px;
+  }
+
+  /* Reduce minimum widths for small mobile screens */
+  .quotations-header .ant-picker,
+  .quotations-header .ant-select {
+    min-width: 250px !important;
+    width: 100%;
+  }
+
+  .quotations-header .ant-picker-range {
+    min-width: 270px !important;
+    width: 100% !important;
+  }
+
+  /* Make date range picker more compact on mobile */
+  .ant-picker-range {
+    font-size: 14px;
+  }
+
+  .ant-picker-range .ant-picker-input input {
+    font-size: 14px;
+  }
+
+  /* Reduce padding in date picker inputs */
+  .ant-picker-range .ant-picker-input {
+    padding: 4px 8px;
+  }
+
+  .ant-table {
+    min-width: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further reduce minimum widths for very small screens */
+  .quotations-header .ant-picker,
+  .quotations-header .ant-select {
+    min-width: 200px !important;
+    width: 100%;
+  }
+
+  .quotations-header .ant-picker-range {
+    min-width: 220px !important;
+    width: 100% !important;
+  }
+
+  /* For very small screens, make the date range picker even more compact */
+  .ant-picker-range .ant-picker-input {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .ant-picker-range .ant-picker-range-separator {
+    padding: 0 4px;
+  }
+}
+
+@media (max-width: 360px) {
+  /* For extra small mobile screens (like iPhone SE, older Android) */
+  .quotations-header .ant-col {
+    padding: 0 4px !important;
+  }
+
+  .quotations-header .ant-picker,
+  .quotations-header .ant-select {
+    min-width: 180px !important;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .quotations-header .ant-picker-range {
+    min-width: 200px !important;
+    width: 100% !important;
+    font-size: 14px;
+  }
+
+  /* Make inputs more compact */
+  .ant-select-selector {
+    padding: 4px 8px !important;
+  }
+
+  .ant-picker {
+    padding: 4px 8px !important;
+  }
+
+  /* Reduce gutter spacing */
+  .quotations-header .ant-row {
+    margin-left: -4px !important;
+    margin-right: -4px !important;
+  }
+}
+
+/* Responsive button styles for ViewQuotation page */
+.quotation-actions-row .ant-btn {
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.2;
+  height: auto;
+  min-height: 40px;
+  padding: 8px 12px;
+}
+
+.quotation-actions-row .button-text {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Desktop and large screens */
+@media (min-width: 1200px) {
+  .quotation-actions-row .ant-btn {
+    min-height: 40px;
+    font-size: 14px;
+  }
+
+  .quotation-actions-row .button-text {
+    white-space: nowrap;
+  }
+}

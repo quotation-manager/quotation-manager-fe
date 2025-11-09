@@ -1,0 +1,41 @@
+.locations-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 16px;
+}
+
+.add-location-btn {
+  flex-shrink: 0;
+}
+
+.search-input {
+  width: 300px;
+  max-width: 100%;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .locations-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .add-location-btn {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+}
+
+/* Tablet responsiveness */
+@media (max-width: 992px) and (min-width: 769px) {
+  .search-input {
+    width: 250px;
+  }
+}
