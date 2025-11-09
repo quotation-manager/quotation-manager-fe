@@ -104,7 +104,7 @@ const Sidebar = ({ collapsed, mobileOpen, setMobileOpen }) => {
       width={250}
     >
       <div className="sidebar-logo">
-        <h2>{collapsed ? 'ML' : 'Maruti Laminates'}</h2>
+        <h2>{collapsed ? 'SL' : 'Sunny Laminates'}</h2>
       </div>
       <Menu
         theme="dark"

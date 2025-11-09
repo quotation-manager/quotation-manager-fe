@@ -72,7 +72,7 @@ const Login = () => {
           <div className="login-header">
             <Space direction="vertical" align="center" size="large">
               <Title level={2} className="login-title">
-                Maruti Laminates
+                Sunny Laminates
               </Title>
               <Text type="secondary" className="login-subtitle">
                 Sign in to your account to continue

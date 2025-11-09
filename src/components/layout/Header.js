@@ -129,7 +129,7 @@ const Header = ({ collapsed, setCollapsed, mobileOpen, setMobileOpen }) => {
         return {
           title: 'Dashboard',
           icon: <UserOutlined />,
-          subtitle: 'Welcome to Maruti Laminates',
+          subtitle: 'Welcome to Sunny Laminates',
         };
     }
   };
